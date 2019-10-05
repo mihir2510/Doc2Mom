@@ -42,7 +42,7 @@ def mom_login():
         try:
             auth.sign_in_with_email_and_password(email,password)
             print('here3')
-            return url_for('/mom_home', id=key)
+            return redirect(url_for('mom_home', id=key))
         except:
             print('here4')
             return render_template('mom_login.html', us = True)  
@@ -66,7 +66,7 @@ def doc_login():
                 # print(user.key()) # Morty
                 # print(user.val()['email']) # {name": "Mortimer 'Morty' Smith"}
             print('here3')
-            return url_for('/doc_home', id=key)
+            return redirect(url_for('doc_home', id=key))
         except:
             print('here4')
             return render_template('doc_login.html', us = True)  
@@ -74,14 +74,31 @@ def doc_login():
 
 @app.route('/mom_home/<id>')
 def mom_home(id):
-    return render_template('mom_home.html')         
+    return render_template('mom_home.html')  
 
 @app.route('/doc_home/<id>')
 def doc_home(id):
-    return render_template('doc_home.html')
+    all_users = db.child("doctors").get()
+    for user in all_users.each():
+        if user.key()==id:
+            print(user.val()['patients'])
+            print(len(user.val()['patients']))
+            print('bhagwan')
+            req_moms = []
+            patients = user.val()['patients']
+            all_moms = db.child("mothers").get()
+            for mom in all_moms.each():
+                if mom.key() in patients:
+                    req_moms.append(mom.val())
+                    patients.remove(mom.key())
+                if len(patients) == 0:
+                    break
 
-@app.route('/doc_add_mom', methods=['GET','POST'])
-def add_mom():
+    return render_template('doc_home.html', key = id, moms = req_moms)
+
+@app.route('/doc_add_mom/<id>', methods=['GET','POST'])
+def add_mom(id):
+    print(id)
     if request.method == 'POST':
         email = request.form['email']
         name = request.form['name']
@@ -97,7 +114,21 @@ def add_mom():
             "father_name" : ''        
         }
         db.child("mothers").child(contact).set(data)
-    return render_template('doc_unique_code.html')
+        password = name+name
+        auth.create_user_with_email_and_password(email, password)
+        all_users = db.child("doctors").get()
+        for user in all_users.each():
+            if user.key()==id:
+                if len(user.val()['patients']) == 0:
+                    numbers = [contact]
+                else:
+                    numbers = user.val()['patients']
+                    numbers.append(contact)
+                db.child("doctors").child(id).update({"patients":numbers})
+                print(user.val()['patients'])
+                # print(len(user.val()['patients']))
+                print('bhagwan')
+    return render_template('doc_unique_code.html', key=id)
 
 @app.route('/mom_reports')
 def mom_reports():
