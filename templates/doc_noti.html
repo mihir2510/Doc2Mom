@@ -6,8 +6,8 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="cal.css">
-    <link rel="stylesheet" href="doc_noti.css">  
+   <!---- <link rel="stylesheet" href="cal.css">-->
+    <link rel="stylesheet" href="static/css/doc_noti.css">  
 </head>
  <body onload="call_two(3,4)">
         <nav class="navbar navbar-default">
@@ -15,9 +15,9 @@
                     
                  <div class="nav navbar-nav">
                     
-                     <img src="mom.png" class="momlogo">
-                      <img src="calendar.png" class="calendarlogo">
-                      <img src="noti.png" class="notilogo">
+                     <img src="static/img/mom.png" class="momlogo">
+                      <img src="static/img/calendar.png" class="calendarlogo">
+                      <img src="static/img/noti.png" class="notilogo">
                   
               </div>
                         <!---- <div class="row">
@@ -48,10 +48,12 @@
           x.setAttribute("class","alert_card");
           var h4=document.createElement("h4");
           h4.innerText="Reminder";
+          h4.setAttribute("class","heading");
           x.append(h4);
           x.append(document.createElement("br"));
           var p=document.createElement("p");
           p.innerText="appointment tomorrow at hh:mm with Name"
+          p.setAttribute("class","text");
           x.append(p);
           var hr=document.createElement("hr");
           x.append(hr);
@@ -66,10 +68,12 @@
           x.setAttribute("class","msg_card");
           var h4=document.createElement("h4");
           h4.innerText="MOM Name";
+          h4.setAttribute("class","heading");
           x.append(h4);
           x.append(document.createElement("br"));
           var p=document.createElement("p");
-          p.innerText="Message Text"
+          p.innerText="Message Text";
+          p.setAttribute("class","text");
           x.append(p);
           var hr=document.createElement("hr");
           x.append(hr);

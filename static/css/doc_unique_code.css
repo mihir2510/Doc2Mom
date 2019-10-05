@@ -1,0 +1,44 @@
+body
+{
+	background-color:#F7F7F7; 
+}
+.logo{
+	width: 100%;
+  	height: auto;   
+  	margin-top:10%;
+	margin-bottom:10%; 
+	line-height:5%;  
+}
+.heading{
+	color:#3399ff;
+	text-align:center;
+	font-size:100px;
+	line-height:10%; 
+	
+}
+.text
+{
+	color:#3399ff;
+	font-size:55px; 
+    margin-bottom:1%; 
+    padding-left:5%;
+}
+.input_box
+{
+    width:90%;
+    margin-left:5%;
+    margin-right:5%;
+    font-size:50px; 
+}
+.sendbtn
+{
+    width:95%;
+    margin-left:2.5%;
+    margin-right:2.5%;
+    font-size:50px; 
+    margin-top:3%;
+    background-color:#3399ff;
+    color:white;
+    border:0%;
+    height:7%; 
+}

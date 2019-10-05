@@ -1,0 +1,21 @@
+.heading
+{
+    color:#EA4C7D;
+    font-size:25px;
+    padding:2%;
+    text-align:center; 
+}
+.text
+{
+    color:#EA4C7D;
+    font-size:15px;
+    line-height:50%; 
+}
+.carddiv
+{
+    padding:2%;
+}
+body
+{
+	background-color:#F7F7F7; 
+}

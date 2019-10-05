@@ -1,0 +1,26 @@
+.mom_login_div
+{
+    padding:2%; 
+}
+.username_pass_box{
+    width:96%;
+    margin:2%;
+    height:5%;  
+    font-size:40px; 
+    line-height:50%; 
+    border:5px;
+}
+.username_pass
+{
+    font-size:55px;
+    color:#EA4C7D; 
+    line-height:50%; 
+}
+.sub_btn
+{
+    width:95%;
+    height:10%;
+    background-color:#EA4C7D;
+    font-size:100px;
+    color:white;
+}

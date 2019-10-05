@@ -1,5 +1,13 @@
-.reportimg
+.report_img
 {
     width: 100%;
-  	height: auto; 
+    height: auto; 
+    padding-left:5%;
+    padding-right:5%;
+}
+.textname
+{
+  color:#EA4C7D;
+  font-size:20px;
+  padding-left:2%;  
 }

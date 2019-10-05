@@ -9,10 +9,10 @@
                 <script src="https://kit.fontawesome.com/68fe40ed82.js" crossorigin="anonymous"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-                <link rel="stylesheet" href="doc_main.css">
+                <link rel="stylesheet" href="static/css/doc_home.css">
 
         </head>
-        <body onload="momcard(4)">
+        <body onload="momcard(6)">
             {% if email %}
             <p>{{email}}</p>
             {% endif %}
@@ -21,9 +21,9 @@
                       
                    <div class="nav navbar-nav">
                       
-                       <img src="mom.png" class="momlogo">
-                        <img src="calendar.png" class="calendarlogo">
-                        <img src="noti.png" class="notilogo">
+                       <img src="static/img/mom.png" class="momlogo">
+                        <img src="static/img/calendar.png" class="calendarlogo">
+                        <img src="static/img/noti.png" class="notilogo">
                     
                 </div>
                           <!---- <div class="row">
@@ -49,7 +49,7 @@
                     <p>appointment date</p>
                     <hr>
                 </div>-->
-                <div>
+                <div class="plus_btn" >
                     <i class="fas fa-plus-circle fa-5x" aria-hidden="true" onclick="window.location.href='{{url_for('add_mom')}}'"></i>
                 </div>
               
@@ -63,13 +63,16 @@
                     x.setAttribute("class","mom_card");
                     var h4=document.createElement("h4");
                     h4.innerText="Mom name";
+                    h4.setAttribute("class","heading");
                     x.append(h4);
                     x.append(document.createElement("br"));
                     var p=document.createElement("p");
-                    p.innerText="3 weeks pregnant"
+                    p.innerText="3 weeks pregnant";
+                    p.setAttribute("class","text");
                     x.append(p);
                     var p1=document.createElement("p");
                     p1.innerText="appointment date:";
+                    p1.setAttribute("class","text");
                     x.append(p1);
                     var hr=document.createElement("hr");
                     hr.setAttribute("color","black");
