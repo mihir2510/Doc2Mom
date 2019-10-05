@@ -9,13 +9,13 @@
 	<img src="{{url_for('static', filename='img/logo.png')}}" id="logo">
 	<h3 id="heading">Doc2Mom</h3>
 	<h5>Hello Mom</h5>
-	<form>
+	<form action="{{url_for('mom_home')}}">
 
 		<p>Username:</p>
 		<input type="text" placeholder="Enter your Username" name="id">
 		<p>Password:</p>
 		<input type="Password" placeholder="Enter your Password" name="pass">
-		<input type="submit" value="LOGIN">
+		<button type="submit" value="LOGIN" >
 	</form>
 	
 </body>

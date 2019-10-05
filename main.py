@@ -13,13 +13,22 @@ def index():
 def sw():
     return app.send_static_file('js/sw.js')
 
-@app.route('/mom1')
-def mom1():
-    return render_template('mom1.html')   
+@app.route('/mom_login')
+def mom_login():
+    return render_template('mom_login.html')   
 
-@app.route('/doc1')
-def doc1():
-    return render_template('doc1.html')   
+@app.route('/doc_login')
+def doc_login():
+    return render_template('doc_login.html') 
+
+@app.route('/mom_home')
+def mom_home():
+    return render_template('mom_home.html')         
+
+@app.route('/mom_reports')
+def mom_reports():
+    return render_template('mom_reports.html')
+
 
 if __name__=='__main__':
     app.run(debug=True)
