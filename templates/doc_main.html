@@ -4,19 +4,25 @@
                 <title>Bootstrap Example</title>
                 <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+                <script src="https://kit.fontawesome.com/68fe40ed82.js" crossorigin="anonymous"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+                <link rel="stylesheet" href="doc_main.css">
+
         </head>
-        <body onload="momcard(3)">
-                <nav class="navbar navbar-default" style="margin-bottom:0%; ">
+        <body onload="momcard(4)">
+                <nav class="navbar navbar-default">
                   <div class="container">
-                   <ul class="nav navbar-nav">
-                    <div>
-                      <a href="#" style="padding-left:10%; padding-right:10%; ">Moms</a>
-                      <img src="calendar.png" style="width: 22%; height: 17%; margin-right:5%">
-                      <img src="noti.png" style="width: 20%; height: 15%; padding-bottom:1.5%;">
-                    </ul>
+                      
+                   <div class="nav navbar-nav">
+                      
+                       <img src="mom.png" class="momlogo">
+                        <img src="calendar.png" class="calendarlogo">
+                        <img src="noti.png" class="notilogo">
+                    
+                </div>
                           <!---- <div class="row">
                               <div class="col-sm-4">
                                 <a href="#" >Moms</a>
@@ -40,6 +46,10 @@
                     <p>appointment date</p>
                     <hr>
                 </div>-->
+                <div >
+                    <i class="fas fa-plus-circle fa-5x" aria-hidden="true"></i>
+                </div>
+              
         </body>
         <script type="text/javascript">
             function momcard(num)
@@ -58,6 +68,9 @@
                     var p1=document.createElement("p");
                     p1.innerText="appointment date:";
                     x.append(p1);
+                    var hr=document.createElement("hr");
+                    hr.setAttribute("color","black");
+                    x.append(hr);
                     document.getElementById("section").append(x);
                 }
             }		
