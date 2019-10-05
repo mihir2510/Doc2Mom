@@ -13,5 +13,9 @@ def index():
 def sw():
     return app.send_static_file('js/sw.js')
 
+@app.route('/mom1')
+def mom1():
+    return render_template('mom1.html')   
+
 if __name__=='__main__':
     app.run(debug=True)
