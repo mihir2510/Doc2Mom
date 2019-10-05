@@ -1,0 +1,14 @@
+body
+{
+	background-color:#F7F7F7; 
+}
+#heading{
+	color:#EA4C7D;
+	text-align:center;
+}
+#logo{
+	width: 100%;
+  	height: auto;   
+  	margin-top:10%;
+  	margin-bottom:10%;  
+}
