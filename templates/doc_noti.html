@@ -1,0 +1,87 @@
+<html>
+<head>
+  	<title>DOC2MOM</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="cal.css">
+    <link rel="stylesheet" href="doc_noti.css">  
+</head>
+ <body onload="call_two(3,4)">
+        <nav class="navbar navbar-default">
+                <div class="container">
+                    
+                 <div class="nav navbar-nav">
+                    
+                     <img src="mom.png" class="momlogo">
+                      <img src="calendar.png" class="calendarlogo">
+                      <img src="noti.png" class="notilogo">
+                  
+              </div>
+                        <!---- <div class="row">
+                            <div class="col-sm-4">
+                              <a href="#" >Moms</a>
+                            </div>
+                            <div class="col-sm-4">
+                              <a href="#">Calendar</a>
+                            </div>
+                            <div class="col-sm-4">
+                              <a href="#">Notifications</a>
+                            </div>-->          
+                </div>
+                </div>
+              </nav>
+              <div id=section>
+
+              </div>
+  	
+        
+ </body>
+ <script type="text/javascript">
+  function alertcard(num)
+  {
+      for(i=0;i<num;i++)
+      {
+          const x=document.createElement("div");
+          x.setAttribute("class","alert_card");
+          var h4=document.createElement("h4");
+          h4.innerText="Reminder";
+          x.append(h4);
+          x.append(document.createElement("br"));
+          var p=document.createElement("p");
+          p.innerText="appointment tomorrow at hh:mm with Name"
+          x.append(p);
+          var hr=document.createElement("hr");
+          x.append(hr);
+          document.getElementById("section").append(x);
+      }
+  }
+  function msgcard(num)
+  {
+    for(i=0;i<num;i++)
+    {
+      const x=document.createElement("div");
+          x.setAttribute("class","msg_card");
+          var h4=document.createElement("h4");
+          h4.innerText="MOM Name";
+          x.append(h4);
+          x.append(document.createElement("br"));
+          var p=document.createElement("p");
+          p.innerText="Message Text"
+          x.append(p);
+          var hr=document.createElement("hr");
+          x.append(hr);
+          document.getElementById("section").append(x);
+    }
+  }
+  function call_two(num_alerts,num_msgs)
+  {
+    alertcard(num_alerts);
+    msgcard(num_msgs);
+  }		
+</script>
+ </html>
+
+
