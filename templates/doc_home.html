@@ -13,6 +13,9 @@
 
         </head>
         <body onload="momcard(4)">
+            {% if email %}
+            <p>{{email}}</p>
+            {% endif %}
                 <nav class="navbar navbar-default">
                   <div class="container">
                       
@@ -46,8 +49,8 @@
                     <p>appointment date</p>
                     <hr>
                 </div>-->
-                <div >
-                    <i class="fas fa-plus-circle fa-5x" aria-hidden="true"></i>
+                <div>
+                    <i class="fas fa-plus-circle fa-5x" aria-hidden="true" onclick="window.location.href='{{url_for('add_mom')}}'"></i>
                 </div>
               
         </body>

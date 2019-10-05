@@ -6,17 +6,20 @@
 	</title>
 </head>
 <body>
+	{% if us %}
+	<script>
+		alert('Incorrect username and password')
+	</script>
+	{% endif %}
 	<img src="{{url_for('static', filename='img/logo.png')}}" id="logo">
 	<h3 id="heading">Doc2Mom</h3>
 	<h5>Hello Mom</h5>
-	<form action="{{url_for('mom_home')}}">
-
+	<form action="/mom_login" method="POST">
 		<p>Username:</p>
 		<input type="text" placeholder="Enter your Username" name="id">
 		<p>Password:</p>
 		<input type="Password" placeholder="Enter your Password" name="pass">
 		<button type="submit" value="LOGIN" >
 	</form>
-	
 </body>
 </html>
