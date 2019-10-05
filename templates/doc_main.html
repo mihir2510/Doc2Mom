@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Bootstrap Example</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        </head>
+        <body onload="momcard(3)">
+                <nav class="navbar navbar-default" style="margin-bottom:0%; ">
+                  <div class="container">
+                   <ul class="nav navbar-nav">
+                    <div>
+                      <a href="#" style="padding-left:10%; padding-right:10%; ">Moms</a>
+                      <img src="calendar.png" style="width: 22%; height: 17%; margin-right:5%">
+                      <img src="noti.png" style="width: 20%; height: 15%; padding-bottom:1.5%;">
+                    </ul>
+                          <!---- <div class="row">
+                              <div class="col-sm-4">
+                                <a href="#" >Moms</a>
+                              </div>
+                              <div class="col-sm-4">
+                                <a href="#">Calendar</a>
+                              </div>
+                              <div class="col-sm-4">
+                                <a href="#">Notifications</a>
+                              </div>-->          
+                  </div>
+                  </div>
+                </nav>
+                <div id=section>
+
+                </div>
+              <!----  <div id="mom_card" style="line-height:50% ">
+                    <h4>Mom Name</h4>
+                    <br>
+                    <p>3 weeks pregnant</p>
+                    <p>appointment date</p>
+                    <hr>
+                </div>-->
+        </body>
+        <script type="text/javascript">
+            function momcard(num)
+            {
+                for(i=0;i<num;i++)
+                {
+                    const x=document.createElement("div");
+                    x.setAttribute("class","mom_card");
+                    var h4=document.createElement("h4");
+                    h4.innerText="Mom name";
+                    x.append(h4);
+                    x.append(document.createElement("br"));
+                    var p=document.createElement("p");
+                    p.innerText="3 weeks pregnant"
+                    x.append(p);
+                    var p1=document.createElement("p");
+                    p1.innerText="appointment date:";
+                    x.append(p1);
+                    document.getElementById("section").append(x);
+                }
+            }		
+        </script>
+</html>

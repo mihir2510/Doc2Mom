@@ -2,21 +2,18 @@
 <head>
 	<title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
 	</title>
 </head>
 <body>
-	<img src="logo.png" id="logo"></img>
+	<img src="{{url_for('static', filename='img/logo.png')}}" id="logo">
 	<h3 id="heading">Doc2Mom</h3>
-	<h5>Hello Mom</h5>
+	<h5>Hello Doc</h5>
+	<p>Username:</p>
 	<form>
-
-		<p>Username:</p>
 		<input type="text" placeholder="Enter your Username" name="id">
-		<p>Password:</p>
 		<input type="Password" placeholder="Enter your Password" name="pass">
 		<input type="submit" value="LOGIN">
 	</form>
-	
+	<p>Password:</p>
 </body>
 </html>

@@ -17,5 +17,9 @@ def sw():
 def mom1():
     return render_template('mom1.html')   
 
+@app.route('/doc1')
+def doc1():
+    return render_template('doc1.html')   
+
 if __name__=='__main__':
     app.run(debug=True)
