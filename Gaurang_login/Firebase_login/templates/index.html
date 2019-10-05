@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebSite</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	{% if s %}
+		<div class="alert alert-success">
+			{{s}}
+		</div>
+	{% endif %}
+	{% if us %}
+		<div class="alert alert-danger">
+			{{us}}
+		</div>
+	{% endif %}
+	<form action="/" method="POST">
+		<h2>Please Sign In</h2>
+		<div class="booking	-form">
+			<label>Email</label>
+			<input type="text" class="form-control" name="email" placeholder="Username" required>
+			<label>Password</label>
+			<input type="password" class="form-control" name="password" placeholder="Password" required>
+			<button type="Submit" class="btn btn-primary">Submit</button>
+		</div>
+	</form>
+</body>
+</html>
