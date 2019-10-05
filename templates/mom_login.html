@@ -4,19 +4,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 	</title>
+	<link rel="stylesheet" type="text/css" href="static/css/mom_login.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/index.css"/>
 </head>
 <body>
-	<img src="{{url_for('static', filename='img/logo.png')}}" id="logo">
-	<h3 id="heading">Doc2Mom</h3>
-	<h5>Hello Mom</h5>
-	<form action="{{url_for('mom_home')}}">
-
-		<p>Username:</p>
-		<input type="text" placeholder="Enter your Username" name="id">
-		<p>Password:</p>
-		<input type="Password" placeholder="Enter your Password" name="pass">
-		<button type="submit" value="LOGIN" >
-	</form>
+	<!--<img src="{{url_for('static', filename='img/logo.png')}}" id="logo">-->
+	<img src="static/img/logo.png" class="logo">
+	<p class="heading" style="font-size:130px; margin-bottom:5%; ">Doc2Mom</p>
+	<!--<p class="text" style="font-size:120px" >Hello Mom</p>-->
+	<div class="mom_login_div">
+		<form action="{{url_for('mom_home')}}">
+		<p class="username_pass">Username:</p>
+		<input type="text" placeholder="Enter your Username" name="id" class="username_pass_box">
+		<p class="username_pass">Password:</p>
+		<input type="Password" placeholder="Enter your Password" name="pass" class="username_pass_box">
+		<button class="sub_btn">LOGIN</button>
+		</form>
+	</div>
 	
 </body>
 </html>

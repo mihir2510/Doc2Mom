@@ -4,26 +4,23 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
 
         <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
-        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>-->
+		<link rel="stylesheet" type="text/css" href="static/css/index.css"/>
 
 		<title>
 			DOC2MOM
 		</title>
 	</head>
 	<body>
-		  <img src="{{url_for('static', filename='img/logo.png')}}" >
-		<h3 id="heading">Doc2Mom</h3>
-		<p id="text">I am a...</p>
-		<div id="container">
-			<ul>
-
-				<button id="mom" onclick="location.href='{{url_for('mom_login')}}'">MOTHER</button>
-				<button id="doc" onclick="location.href='{{url_for('doc_login')}}'">DOCTOR</button>
-			</ul>
-		</div>
+		 <!----<img src="{{url_for('static', filename='img/logo.png')}}" >-->
+		 <img src="static/img/logo.png" class="logo">
+		<p class="heading">Doc2Mom</p>
+		<p class="text">I am a...</p>
+		<button id="mom" onclick="location.href='{{url_for('mom_login')}}'">MOTHER</button>
+		<button id="doc" onclick="location.href='{{url_for('doc_login')}}'">DOCTOR</button>
 	</body>
-</html>
+</html>  

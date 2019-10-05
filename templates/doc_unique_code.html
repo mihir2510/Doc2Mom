@@ -3,23 +3,25 @@
 	<title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</title>
+	<link rel="stylesheet" type="text/css" href="static/css/doc_unique_code.css"/>
 </head>
 <body>
-	<img src="logo.png" id="logo"></img>
-	<h3 id="heading">Doc2Mom</h3>
-	<h5>Hello Doc</h5>
+	<img src="static/img/logo.png" class="logo"></img>
+	<h3 class="heading">Doc2Mom</h3>
+	<!--<h5>Hello Doc</h5>-->
 	<form>
-        <p>Mother name:</p>
-        <input type="text" placeholder="Enter Name" name="name">
-        <p>Email:</p>
-        <input type="text" placeholder="Enter email" name="email">
-        <p>Contact no</p>
-		<input type="text" placeholder="Enter contact no" name="contact_no">
-		<p>Blood Group</p>
-		<input type="text" placeholder="Enter blood_group" name="blood_group">
-		<p>Number of days to birth</p>
-		<input type="text" placeholder="Enter number of days to birth" name="DTB">
-		<input type="submit" value="Send Unique Code">
+        <p class="text">Mother name:</p>
+        <input type="text" placeholder="Enter Name" name="name" class="input_box">
+        <p class="text">Email:</p>
+        <input type="text" placeholder="Enter email" name="email" class="input_box">
+        <p class="text">Contact no</p>
+		<input type="text" placeholder="Enter contact no" name="contact_no" class="input_box">
+		<p class="text">Blood Group</p>
+		<input type="text" placeholder="Enter blood_group" name="blood_group" class="input_box">
+		<p class="text">Number of days to birth</p>
+		<input type="text" placeholder="Enter number of days to birth" name="DTB" class="input_box">
+		<!--<input type="submit" value="Send Unique Code">-->
+		<button class="sendbtn"> Send Unique Code</button>
 	</form>
 </body>
 </html>
