@@ -9,18 +9,21 @@
                 <script src="https://kit.fontawesome.com/68fe40ed82.js" crossorigin="anonymous"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-                <link rel="stylesheet" href="static/css/doc_home.css">
+                <link rel="stylesheet" href="{{url_for('static', filename='css/doc_home.css')}}">
 
         </head>
-        <body onload="momcard(6)">
+        <body>
+            {% if email %}
+            <p>{{email}}</p>
+            {% endif %}
                 <nav class="navbar navbar-default">
                   <div class="container">
                       
                    <div class="nav navbar-nav">
                       
-                       <img src="static/img/mom.png" class="momlogo">
-                        <img src="static/img/calendar.png" class="calendarlogo">
-                        <img src="static/img/noti.png" class="notilogo">
+                       <img src="{{url_for('static', filename='img/mom.png')}}" class="momlogo">
+                        <img src="{{url_for('static', filename='img/calendar.png')}}" class="calendarlogo">
+                        <img src="{{url_for('static', filename='img/noti.png')}}" class="notilogo">
                     
                 </div>
                           <!---- <div class="row">
@@ -37,17 +40,19 @@
                   </div>
                 </nav>
                 <div id=section>
-
+                  {% for mom in moms %}
+                    <div class="mom_card" style="line-height:50% ">
+                        <h4 class="heading">{{mom['name']}}</h4>
+                        <br>
+                        <p class="text">{{mom['dtb']}} days to childbirth </p>
+                        <p class="text">appointment date</p>
+                        <hr color="black">
+                    </div>
+                  {% endfor %}
                 </div>
-              <!----  <div id="mom_card" style="line-height:50% ">
-                    <h4>Mom Name</h4>
-                    <br>
-                    <p>3 weeks pregnant</p>
-                    <p>appointment date</p>
-                    <hr>
-                </div>-->
+
                 <div class="plus_btn" >
-                    <i class="fas fa-plus-circle fa-5x" aria-hidden="true"></i>
+                    <i class="fas fa-plus-circle fa-5x" aria-hidden="true" onclick="window.location.href='{{url_for('add_mom', id = key)}}'"></i>
                 </div>
               
         </body>

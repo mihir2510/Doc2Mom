@@ -3,24 +3,23 @@
 	<title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</title>
-	<link rel="stylesheet" type="text/css" href="static/css/doc_unique_code.css"/>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/doc_unique_code.css')}}"/>
 </head>
 <body>
-	<img src="static/img/logo.png" class="logo"></img>
+	<img src="logo.png" id="logo"></img>
 	<h3 class="heading">Doc2Mom</h3>
-	<!--<h5>Hello Doc</h5>-->
-	<form>
+	<!-- <h5>Hello Doc</h5> -->
+	<form action="{{url_for('add_mom', id = key)}}" method = 'POST'>
         <p class="text">Mother name:</p>
         <input type="text" placeholder="Enter Name" name="name" class="input_box">
         <p class="text">Email:</p>
         <input type="text" placeholder="Enter email" name="email" class="input_box">
         <p class="text">Contact no</p>
-		<input type="text" placeholder="Enter contact no" name="contact_no" class="input_box">
+		<input type="text" placeholder="Enter contact no" name="contact" class="input_box">
 		<p class="text">Blood Group</p>
-		<input type="text" placeholder="Enter blood_group" name="blood_group" class="input_box">
+		<input type="text" placeholder="Enter blood_group" name="bldgrp" class="input_box">
 		<p class="text">Number of days to birth</p>
-		<input type="text" placeholder="Enter number of days to birth" name="DTB" class="input_box">
-		<!--<input type="submit" value="Send Unique Code">-->
+		<input type="text" placeholder="Enter number of days to birth" name="dtb" class="input_box">
 		<button class="sendbtn"> Send Unique Code</button>
 	</form>
 </body>
