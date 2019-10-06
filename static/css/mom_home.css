@@ -8,6 +8,7 @@
     border:0; 
     color:white;
     font-size:2.5em;
+    border-radius:15px; 
 }
 body
 {
@@ -138,18 +139,52 @@ body
   
   /* Style the "Add" button */
   .addBtn {
-    padding: 10px;
+    padding: 5px;
     width: 25%;
     background: #d9d9d9;
     color: #555;
-    float: left;
+    float: right;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 0;
+    border-radius:15px;
   }
   
   .addBtn:hover {
     background-color: #bbb;
   }
+  #myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 14px; /* Increase font-size */
+    padding: 6px 10px 6px 20px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+    color:black;
+    border-radius:15px; 
+  }
+  #myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+  }
+  
+  #myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+  }
+  
+  #myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+  }
+  
