@@ -3,15 +3,18 @@
 	<title>DOC2MOM</title>
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://kit.fontawesome.com/68fe40ed82.js" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mom_reports.css') }}"/>
- <!---- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mom_reports.css') }}">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/doc_reports.css') }}">
 
 </head>
 <body onload="createcard(3)">
-	<nav class="navbar navbar-inverse" style="background-color:#F7F7F7;" >
+    <nav class="navbar navbar-inverse" style="background-color:red" >
 		<div class="container-fluid">
 		  <div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -19,20 +22,32 @@
 			  <span class="icon-bar"></span>
 			  <span class="icon-bar"></span>                        
 			</button>
-			<a class="navbar-brand" href="#">Doc2Mom</a>
+			<a class="navbar-brand" href="#">WebSiteName</a>
 		  </div>
 		  <div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-			  <li><a href="/mom_home/{{key}}">Home</a></li>
-			  <li><a href="/emergency/{{key}}">Emergency Contact</a></li>
+			  <li><a href="#">Home</a></li>
+			  
+			  <li><a href="#">Page 2</a></li>
+			  <li><a href="#">Page 3</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
 			</ul>
 		  </div>
-		</div>
+		</div>class="textname"
 	  </nav>
-	<div id="child" style="padding:2px; ">
+      <p class="textname">Name:{{deets['name']}}</p>
+      <p class="textname">BloodGroup:{{deets['bldgrp']}}</p>
+      <p class="textname">Name:{{deets['dtb']}} days to childbirth</p>
+  
+      <div id="child" style="padding:2px; ">
 		
 	</div>
-	<!--<div style="color:black;  padding:2%; ">
+    <div class="plus_btn" >
+        <i class="fas fa-plus-circle fa-5x" aria-hidden="true"></i>
+    </div>
+    <!--<div style="color:black;  padding:2%; ">
 		<p >Reminder:</p>
 		<P>Time:</P>
 	</div>-->

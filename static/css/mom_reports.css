@@ -11,6 +11,27 @@
   font-size:20px;
   padding-left:2%;  
 }
+.fas fa-plus-circle fa-5x
+{
+    
+    z-index:1;
+    bottom:5px;
+    right:5px;
+    background-color:white;
+    font-size:40px; 
+   
+    
+}
+.plus_btn
+{
+    position:fixed;
+    z-index:1;
+    bottom:5px;
+    right:5px;
+    background-color:white;
+    color:#3399ff;
+    font-size:10px;
+}
 body
 {
   background-color:#F7F7F7;
