@@ -42,7 +42,7 @@
                 <div id=section>
                   {% for mom in moms %}
                     <div class="mom_card" style="line-height:50% ">
-                        <h4 class="heading">{{mom['name']}}</h4>
+                        <h4 class="heading" onclick="window.location.href='{{url_for('doc_reports', id = mom['contact'])}}'">{{mom['name']}}</h4>
                         <br>
                         <p class="text">{{mom['dtb']}} days to childbirth </p>
                         <p class="text">appointment date</p>

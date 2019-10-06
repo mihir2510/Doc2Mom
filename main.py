@@ -41,6 +41,11 @@ def mom_login():
         password = request.form['pass']
         try:
             auth.sign_in_with_email_and_password(email,password)
+            all_users = db.child("mothers").get()
+            for user in all_users.each():
+                if user.val()['email'] == email:
+                    key = user.key()
+                    print(key)
             print('here3')
             return redirect(url_for('mom_home', id=key))
         except:
@@ -129,6 +134,15 @@ def add_mom(id):
                 # print(len(user.val()['patients']))
                 print('bhagwan')
     return render_template('doc_unique_code.html', key=id)
+
+@app.route('/doc_reports/<id>')
+def doc_reports(id):
+    print(id)
+    all_moms = db.child("mothers").get()
+    for mom in all_moms.each():
+        if mom.key()==id:
+            print(mom.val())
+        return render_template('doc_reports.html', deets = mom.val())
 
 @app.route('/mom_reports')
 def mom_reports():
