@@ -19,3 +19,52 @@ body
 {
 	background-color:#F7F7F7; 
 }
+.navbar-inverse .navbar-brand
+{
+  margin-left:30%;
+  color:#EA4C7D;
+  border:0%;
+}
+.icon-bar
+{
+  background-color:#EA4C7D;
+}
+.navbar-inverse
+{
+  border-color: #EA4C7D;
+}
+.navbar-inverse .navbar-toggle
+{
+ border-color:#EA4C7D;
+ border:0px; 
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover
+{
+  background-color:#F7F7F7;
+}
+.navbar-inverse .navbar-toggle .icon-bar
+{
+  background-color:#EA4C7D;
+}
+.plus_btn
+{
+    
+    position:fixed;
+    z-index:1;
+    bottom:10px;
+    right:10px;
+    background-color:#F7F7F7; 
+    color:#EA4C7D;
+    font-size:10px;
+}
+.fas fa-plus-circle fa-5x
+{
+    
+    z-index:1;
+    bottom:10px;
+    right:10px;
+    background-color:#F7F7F7; 
+    font-size:40px; 
+   
+    
+}    

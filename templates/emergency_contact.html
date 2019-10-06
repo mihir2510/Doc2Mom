@@ -5,12 +5,14 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <script src="https://kit.fontawesome.com/68fe40ed82.js" crossorigin="anonymous"></script>
   <!--	<link rel="stylesheet" href="cal.css">-->
   <link rel="stylesheet" href="static/css/emergency_contact.css"> 
 </head>
 <body onload="createcard(3)">
-	<nav class="navbar navbar-inverse" style="background-color:red" >
+	<nav class="navbar navbar-inverse" style="background-color:#F7F7F7;" >
 		<div class="container-fluid">
 		  <div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -18,17 +20,12 @@
 			  <span class="icon-bar"></span>
 			  <span class="icon-bar"></span>                        
 			</button>
-			<a class="navbar-brand" href="#">WebSiteName</a>
+			<a class="navbar-brand" href="#">Doc2Mom</a>
 		  </div>
 		  <div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
+			  <li><a href="#">Reports</a></li>
 			  <li><a href="#">Home</a></li>
-			  
-			  <li><a href="#">Page 2</a></li>
-			  <li><a href="#">Page 3</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-			  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
 			</ul>
 		  </div>
 		</div>
@@ -40,7 +37,11 @@
     </div>-->
     <div id="child">
 
-    </div>
+	</div>
+	<div class="plus_btn" >
+		<!--<i class="fas fa-plus-circle fa-5x" aria-hidden="true" onclick="window.location.href='{{url_for('add_mom', id = key)}}'"></i>-->
+		<i class="fas fa-plus-circle fa-5x" aria-hidden="true"></i>
+	</div>
 </body>
 <script type="text/javascript">
     function createcard(num)
