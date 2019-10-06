@@ -47,6 +47,7 @@
 }
 .plus_btn
 {
+    
     position:fixed;
     z-index:1;
     bottom:5px;
@@ -70,4 +71,4 @@
     line-height:50%; 
     padding-left:2%; 
     color:black;
-}
+}  
