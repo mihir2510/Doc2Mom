@@ -176,9 +176,21 @@ def emergency(id):
             print(emergencies)
         return render_template('emergency_contact.html', key=id, contacts = emergencies)
 
-@app.route('/mom_reports')
-def mom_reports():
-    return render_template('mom_reports.html')
+@app.route('/mom_reports/<id>')
+def mom_reports(id):
+    return render_template('mom_reports.html', key=id)
+
+@app.route('/send_sos/<message>/<id>')
+def send_sos(message, id):
+    print('SOS message:',message)
+    all_moms = db.child("mothers").get()
+    for mom in all_moms.each():
+        emergencies = []
+        if mom.key()==id:
+            print(mom.val())
+            emergencies = [element for element in mom.val()['emergency'] if element['name'] != '']
+            print(emergencies)
+            return (str(emergencies) + str(message))    
 
 @app.route('/add_doc', methods=['GET', 'POST'])
 def add_doc():

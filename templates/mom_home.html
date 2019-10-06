@@ -7,6 +7,7 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  	<!-- <script src="{{url_for('static', filename='js/speech.js')}}"></script> -->
   	<link rel="stylesheet" href="{{url_for('static', filename='css/mom_home.css')}}">
 
 	 <!---- <meta charset="utf-8">
@@ -29,15 +30,14 @@
 		  </div>
 		  <div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-        <li><a href="#">Reports</a></li>
+        <li><a href="/mom_reports/{{key}}">Reports</a></li>
         <li><a href="/emergency/{{key}}">Emergency Contact</a></li>
 			</ul>
 		  </div>
 		</div>
 	  </nav>
 <button class="SOSbtn">SOS</button>
-
-
+<input type="text" class = "speech" name = "message">
 <div id="myDIV" class="header">
   <h2>My Activity List</h2>
   <input type="text" id="myInput" placeholder="Title...">
@@ -65,6 +65,35 @@
 
            
  </body>
+ <script>
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+const recognition = new SpeechRecognition();
+const synth = window.speechSynthesis; 
+
+document.addEventListener('DOMContentLoaded', function(){
+    console.log(document.getElementsByClassName('SOSbtn'));
+    document.getElementsByClassName('SOSbtn')[0].addEventListener('click', function(){ 
+        recognition.start();
+        console.log('Ready to recieve speech!');
+    }, false);
+}, false);
+
+recognition.onresult = (event) => {
+    var id = JSON.parse({{ key | tojson }})
+    console.log('result created');
+    console.log(event.results);
+    const speechToText = event.results[0][0].transcript;
+    console.log(speechToText);
+    document.getElementsByClassName("speech")[0].innerHTML = speechToText;
+    console.log(id);
+    console.log('xyz');
+    
+    var url = '/send_sos/'+speechToText+'/'+id
+    console.log(url);
+    
+    window.location.assign(url)
+}
+ </script>
  </html>
 
 

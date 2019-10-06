@@ -153,3 +153,7 @@ body
   .addBtn:hover {
     background-color: #bbb;
   }
+
+  .speech{
+    display: none;
+  }
