@@ -1,0 +1,61 @@
+<html>
+<head>
+  	<title>DOC2MOM</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="doc_cal.css">
+    <link rel="stylesheet" href="static/css/doc_noti.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <script src="https://kit.fontawesome.com/68fe40ed82.js" crossorigin="anonymous"></script> 
+</head>
+
+<body>
+        <nav class="navbar navbar-default">
+                <div class="container">
+                    
+                 <div class="nav navbar-nav">
+                    
+                     <!--<img src="static/img/mom.png" class="momlogo">
+                      <img src="static/img/calendar.png" class="calendarlogo">-->
+                      <!--<div class="calendarlogo">-->
+                          <i class="fas fa-baby" style="font-size:35px; margin-top:2%; margin-left:16%; "></i>
+                          <i class="far fa-calendar-alt" style="font-size:35px; margin-top:2%; margin-left:16%;"></i>  
+                          <i class="far fa-bell" style="font-size:35px; margin-top:2%;margin-left:16%;"></i>
+                      </div>
+                     <!---- <img src="static/img/noti.png" class="notilogo">-->
+                  
+              </div>
+                               
+                </div>
+                </div>
+              </nav>
+              <div id="myDIV" class="header">
+  <h2>My Activity List</h2>
+  <ul>
+	<input type="text" id="myInput" placeholder="Title..." style="color:black;">
+  <input type="time" id="myInput" placeholder="Time...">
+  <input type="date" id="myInput" placeholder="Date...">
+  <input onclick="newElement()" class="addBtn" value="ADD">
+  
+</ul>
+</div>
+
+
+<table id="myTable">
+	<tr class="header">
+	  <th style="width:60%; color:#3399ff;">Title</th>
+	  <th style="width:30%;color:#3399ff;">Time</th>
+	  <th style="width:30%;color:#3399ff;">Date</th>
+
+	</tr>
+	<tr>
+
+	  <td>Title</td>
+	  <td>Time</td>
+	  <td>Date</td>
+	</tr>
+
+              

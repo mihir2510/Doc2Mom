@@ -9,7 +9,8 @@
                 <script src="https://kit.fontawesome.com/68fe40ed82.js" crossorigin="anonymous"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-                <link rel="stylesheet" href="{{url_for('static', filename='css/doc_home.css')}}">
+              <!----  <link rel="stylesheet" href="{{url_for('static', filename='css/doc_home.css')}}">-->
+              <link rel="stylesheet" href="static/css/doc_noti.css">
 
         </head>
         <body>
@@ -21,9 +22,12 @@
                       
                    <div class="nav navbar-nav">
                       
-                       <img src="{{url_for('static', filename='img/mom.png')}}" class="momlogo">
+                       <!--<img src="{{url_for('static', filename='img/mom.png')}}" class="momlogo">
                         <img src="{{url_for('static', filename='img/calendar.png')}}" class="calendarlogo">
-                        <img src="{{url_for('static', filename='img/noti.png')}}" class="notilogo">
+                        <img src="{{url_for('static', filename='img/noti.png')}}" class="notilogo">-->
+                        <i class="fas fa-baby" style="font-size:35px; margin-top:2%; margin-left:16%; "></i>
+                      <i class="far fa-calendar-alt" style="font-size:35px; margin-top:2%; margin-left:16%;"></i>
+                      <i class="far fa-bell" style="font-size:35px; margin-top:2%;margin-left:16%;"></i>
                     
                 </div>
                           <!---- <div class="row">
@@ -42,7 +46,7 @@
                 <div id=section>
                   {% for mom in moms %}
                     <div class="mom_card" style="line-height:50% ">
-                        <h4 class="heading" onclick="window.location.href='{{url_for('doc_reports', id = mom['contact'])}}'">{{mom['name']}}</h4>
+                        <h4 class="heading">{{mom['name']}}</h4>
                         <br>
                         <p class="text">{{mom['dtb']}} days to childbirth </p>
                         <p class="text">appointment date</p>
