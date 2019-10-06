@@ -9,9 +9,9 @@
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <script src="https://kit.fontawesome.com/68fe40ed82.js" crossorigin="anonymous"></script>
   <!--	<link rel="stylesheet" href="cal.css">-->
-  <link rel="stylesheet" href="static/css/emergency_contact.css"> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/emergency_contact.css') }}"> 
 </head>
-<body onload="createcard(3)">
+<body>
 	<nav class="navbar navbar-inverse" style="background-color:#F7F7F7;" >
 		<div class="container-fluid">
 		  <div class="navbar-header">
@@ -36,33 +36,32 @@
 		<P>Contact no:</P>
     </div>-->
     <div id="child">
-
+				{% for contact in contacts %}
+			<div class = "carddiv">
+				<p class="text">Name: {{contact['name']}}</p>
+				<p class="text">Contact no: {{contact['number']}}</p>
+				<hr>
+			</div>
+			{% endfor %}
 	</div>
-	<div class="plus_btn" >
+	<form action="{{url_for('emergency', id = key)}}" method = 'POST' id = "form">
+			<p class="text">Name:</p>
+			<input type="text" placeholder="Enter Name" name="name" class="input_box">
+			<p class="text">Contact no:</p>
+			<input type="text" placeholder="Enter contact no" name="number" class="input_box">
+			<button onclick = "refreshh()"> Add contact </button>
+</form>
+	<!-- <div class="plus_btn" > -->
 		<!--<i class="fas fa-plus-circle fa-5x" aria-hidden="true" onclick="window.location.href='{{url_for('add_mom', id = key)}}'"></i>-->
-		<i class="fas fa-plus-circle fa-5x" aria-hidden="true"></i>
-	</div>
+		<!-- <i class="fas fa-plus-circle fa-5x" aria-hidden="true"></i>
+	</div> -->
 </body>
 <script type="text/javascript">
-    function createcard(num)
+    function refreshh()
     {
-        for(i=0;i<num;i++)
-        {
-            const x=document.createElement("div");
-			x.setAttribute("class","carddiv");
-            var p=document.createElement("p");
-            p.innerText="Name: ";
-			p.setAttribute("class","text");
-            var p1=document.createElement("p");
-            p1.innerText="Contact no: ";
-			p1.setAttribute("class","text");
-            x.append(p);
-            x.append(p1);
-			x.append(document.createElement("hr"));
-            document.getElementById("child").append(x);
-
-
-        }
+			var frm = document.getElementById('form');
+  	 	frm.submit(); // Submit the form
+   		frm.reset();
     }		
 </script>
 </html>
