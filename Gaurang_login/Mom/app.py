@@ -1,14 +1,14 @@
 import pyrebase 
 from firebase import firebase
 config = {
-	"apiKey": "AIzaSyAsOiVevLBVDCXlV-65Ypx_e1kT0dk5VdU",
-    "authDomain": "fir-858f5.firebaseapp.com",
-    "databaseURL": "https://fir-858f5.firebaseio.com",
-    "projectId": "fir-858f5",
-    "storageBucket": "fir-858f5.appspot.com",
-    "messagingSenderId": "496902930897",
-    "appId": "1:496902930897:web:f251756990220423f1e0f0",
-    "measurementId": "G-XCY92J7L3C"
+	"apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": "",
+    "appId": "",
+    "measurementId": ""
 }
 
 firebase1 = pyrebase.initialize_app(config)
