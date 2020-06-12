@@ -6,19 +6,38 @@
 
 </div>
 
+### Features
+
+- During Pregnancy mothers send SOS message to the registered list of people.
+- Activity list can be added.
+- Calender events can be created.
+- SOS message goes to WhatsApp for now. (Using Twilio)
+- Reports can be shared by the doctor and viewed by the mother.
+- PWA can be generated.
 
 <div align="center">
 
 <h3 > Screenshots  </h3>
 <br>
-<img src="designs/1-home.png" width=700px>
+<img src="designs/home.png" width=200px>
+<img src="designs/login.png" width=200px>
 <br>
-<img src="assets/Problem.PNG" width=700px>
 <br>
-<img src="assets/IDE.PNG" width=700px>
+<img src="designs/Activity.jpeg" width=200px height=400px>
+<img src="designs/calender.png" width=200px height=400px>
+<br>
+<br>
+<img src="designs/SOS.jpeg" width=200px>
+</div>
+
 <br>
 
-<div align="center">
+### TODO
+
+- [] Local SMS Feature.
+- [] Calling Feature.
+
+<br>
 
 
 ### Contributors
@@ -27,3 +46,9 @@
 - [mihir2510](https://github.com/mihir2510)
 - [GaurangAthavale](https://github.com/GaurangAthavale)
 - [deepdama10](https://github.com/deepdama10)
+
+<br>
+
+### Recognition
+
+- This project was made during KJSCE Hack which was 24hrs Hackathon hosted by KJSCE Codecell.
