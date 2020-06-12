@@ -1,4 +1,25 @@
+<div align="center">
+
 # Doc2Mom
+
+[![made-with-Flask](http://img.shields.io/badge/Made%20with-Flask-red)](https://pypi.org/project/Flask)
+
+</div>
+
+
+<div align="center">
+
+<h3 > Screenshots  </h3>
+<br>
+<img src="designs/1-home.png" width=700px>
+<br>
+<img src="assets/Problem.PNG" width=700px>
+<br>
+<img src="assets/IDE.PNG" width=700px>
+<br>
+
+<div align="center">
+
 
 ### Contributors
 
