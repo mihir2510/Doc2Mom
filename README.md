@@ -34,8 +34,8 @@
 
 ### TODO
 
-- [] Local SMS Feature.
-- [] Calling Feature.
+- [ ] Local SMS Feature.
+- [ ] Calling Feature.
 
 <br>
 
